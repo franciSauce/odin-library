@@ -115,3 +115,41 @@ main {
     transition: all 0.5s ease-in-out;
 }
 
+.book-icon > .status-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid gold;
+    text-align: center;
+    margin-right: 32px;
+    background-color: green;
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.book-icon > .status-btn:hover {
+    background-color: darkgoldenrod;
+    box-shadow: 0px 3px 15px 2px darkgoldenrod ;
+    color: green;
+    font-weight: bold;
+}
+
+.book-icon > .delete-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid rgb(252, 95, 95);
+    margin-left: 32px;
+    background-color: rgb(26, 26, 26);
+    color: rgb(252, 95, 95);
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.book-icon > .delete-btn:hover {
+    background-color: darkred;
+    box-shadow: 0px 3px 15px 2px rgb(252, 95, 95) ;
+    color: rgb(252, 95, 95);
+    font-weight: bold;
+}
