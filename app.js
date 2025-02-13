@@ -99,3 +99,40 @@ function displayBooks() {
     }
     displayStats();
 }
+
+// Update & display stats
+function displayStats() {
+    let readBooks = myLibrary.filter(book => {
+        if (book.status.toLowerCase() === "read")
+        return true;
+    })
+    let unreadBooks = myLibrary.filter(book => {
+        if (book.status.toLowerCase() === "unread")
+        return true;
+    })
+    bookTotal.textContent = `${myLibrary.length}`;
+    bookRead.textContent = `${readBooks.length}`;
+    bookUnread.textContent = `${unreadBooks.length}`;
+}
+
+// Modal functions
+function displayModal() {
+    console.log("Display modal function is called");
+    modalBox.classList.add("show");
+}
+
+function closeModal() {
+    console.log("Close modal function is called");
+    modalBox.classList.remove("show");
+    resetInputs();
+}
+
+function resetInputs() {
+    bookTitle.value = "";
+    authorName.value = "";
+    bookPage.value = "";
+    bookStatus.value = "";
+}
+
+displayBooks();
+
