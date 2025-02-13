@@ -20,3 +20,24 @@ let myLibrary = [{
     status: "Unread"
 }];
 
+// Book Constructor
+class Book {
+    constructor(title, author, pages, status) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.status = status;
+    }
+}
+
+// Function to add a new book to the library
+function addNewBook() {
+    if (bookTitle.value === "" || authorName.value === "" || bookPage.value === "" || bookStatus === "")
+        return;
+        bookGrid.innerHTML = "";
+        const newBook = new Book(bookTitle.value, authorName.value, bookPage.value, bookStatus.value);
+        myLibrary.push(newBook);
+        displayBooks();
+        closeModal();
+}
+
