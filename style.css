@@ -153,3 +153,39 @@ main {
     color: rgb(252, 95, 95);
     font-weight: bold;
 }
+
+.modal-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+}
+
+.modal-box.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border: 4px solid rgb(95, 252, 239);
+    border-radius: 12px;
+    padding: 20px;
+    height: 32rem;
+    width: 25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+}
