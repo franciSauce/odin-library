@@ -60,3 +60,42 @@ function deleteBook() {
     cardGrid.innerHTML = "";
     displayBooks();
 }
+
+// Display
+function displayBooks() {
+    bookGrid.innerHTML = "";
+    for (let [index, book] of myLibrary.entries()) {
+        const icon = document.createElement("div");
+        icon.classList.add("book-icon");
+        const txtTitle = document.createElement("h3");
+        txtTitle.textContent = `${book.title}`;
+        const txtAuthor = document.createElement("p");
+        txtAuthor.textContent = `by ${book.author}`;
+        const txtPage = document.createElement("p");
+        txtPage.textContent = `${book.page} pages`;
+        const txtStatus = document.createElement("p");
+        txtStatus.textContent = book.status;
+
+        const changeStatusBtn = document.createElement("button");
+        changeStatusBtn.textContent = "S";
+        changeStatusBtn.classList.add("status-btn");
+        changeStatusBtn.setAttribute("data-index", index);
+        changeStatusBtn.addEventListener("click", changeBookStatus);
+
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "X";
+        delBtn.classList.add("delete-btn");
+        delBtn.setAttribute("data-index", index);
+        delBtn.addEventListener("click", deleteBook);
+
+        icon.appendChild(txtTitle);
+        icon.appendChild(txtAuthor);
+        icon.appendChild(txtPage);
+        icon.appendChild(txtStatus);
+        icon.appendChild(changeStatusBtn);
+        icon.appendChild(delBtn);
+
+        bookGrid.appendChild(icon);
+    }
+    displayStats();
+}
