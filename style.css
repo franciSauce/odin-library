@@ -220,3 +220,27 @@ main {
     border-radius: 12px;
     font-size: 1.75rem;
 }
+
+.btns > #close {
+    border: 3px solid rgb(252, 95, 95);
+    color: rgb(252, 95, 95);
+}
+
+.btns > #close:hover {
+    background-color: rgb(252, 95, 95);
+    color: rgb(26, 26, 26);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btns > #submit {
+    border: 3px solid rgb(95, 252, 239);
+    color: rgb(95, 252, 239);
+}
+
+.btns > #submit:hover {
+    background-color: rgb(26, 26, 26);
+    color: rgb(26, 26, 26);
+    cursor: pointer;
+    font-weight: bold;
+}
