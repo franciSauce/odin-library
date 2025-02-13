@@ -41,3 +41,22 @@ function addNewBook() {
         closeModal();
 }
 
+// Change book status
+function changeBookStatus() {
+    let dataIndex = this.getAttribute("data-index");
+    if (myLibrary[dataIndex].status.toLowerCase() === "read") {
+        myLibrary[dataIndex].status = "Unread";
+    } else {
+        myLibrary[dataIndex].status = "Read";
+    }
+    displayBooks();
+}
+displayBooks();
+
+// Delete book from the Library
+function deleteBook() {
+    let dataIndex = this.getAttribute("data-index");
+    myLibrary.splice(dataIndex, 1);
+    cardGrid.innerHTML = "";
+    displayBooks();
+}
