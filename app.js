@@ -16,16 +16,16 @@ const bookUnread = document.querySelector(".unread");
 let myLibrary = [{
     title: "Harry Potter and the Philosopher's Stone",
     author: "J.K. Rowling",
-    pages: 320,
+    page: 320,
     status: "Unread"
 }];
 
 // Book Constructor
 class Book {
-    constructor(title, author, pages, status) {
+    constructor(title, author, page, status) {
         this.title = title;
         this.author = author;
-        this.pages = pages;
+        this.page = page;
         this.status = status;
     }
 }
@@ -117,12 +117,10 @@ function displayStats() {
 
 // Modal functions
 function displayModal() {
-    console.log("Display modal function is called");
     modalBox.classList.add("show");
 }
 
 function closeModal() {
-    console.log("Close modal function is called");
     modalBox.classList.remove("show");
     resetInputs();
 }
@@ -138,7 +136,6 @@ displayBooks();
 
 // Event Listeners
 addBook.addEventListener("click", function() {
-    console.log("Add button clicked!");
     displayModal();
 });
 cancelBtn.addEventListener("click", closeModal);
